@@ -1,0 +1,3077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xiaomi India Navbar & Hero Slider</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+    }
+
+    /* ========================================================
+       1. MAIN HEADER NAVBAR STYLES (.uniqo1)
+       ======================================================== */
+    .uniqo1 {
+      width: 100%;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      position: relative;
+      z-index: 1005;
+    }
+
+    .uniqo1 .uniqo1-nav {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 0 32px;
+      height: 60px;
+    }
+
+    .uniqo1 .uniqo1-logo-container {
+      display: flex;
+      align-items: center;
+      margin-right: 48px;
+    }
+
+    .uniqo1 .uniqo1-logo {
+      width: 36px;
+      height: 36px;
+      background-color: #ff6700;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .uniqo1 .uniqo1-toggle {
+      display: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #333;
+      margin-right: 15px;
+    }
+
+    .uniqo1 .uniqo1-menu {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+      height: 100%;
+      align-items: center;
+    }
+
+    .uniqo1 .uniqo1-menu-item {
+      position: static;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .uniqo1 .uniqo1-menu-item > a {
+      text-decoration: none;
+      color: #191919;
+      font-size: 14px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+
+    .uniqo1 .uniqo1-menu-item:hover > a {
+      color: #ff6700;
+      border-bottom-color: #ff6700;
+    }
+
+    .uniqo1 .uniqo1-right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      height: 100%;
+    }
+
+    .uniqo1 .uniqo1-extra-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .uniqo1 .uniqo1-extra-links a {
+      text-decoration: none;
+      color: #191919;
+      font-size: 14px;
+      font-weight: 400;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .uniqo1 .uniqo1-extra-links a:hover {
+      color: #ff6700;
+    }
+
+    .uniqo1 .uniqo1-icons {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      height: 100%;
+    }
+
+    .uniqo1 .uniqo1-icon-btn {
+      color: #191919;
+      font-size: 18px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .uniqo1 .uniqo1-icon-btn:hover {
+      color: #ff6700;
+    }
+
+    /* Mega Menu Dropdowns */
+    .uniqo1 .uniqo1-dropdown {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      display: none;
+      padding: 30px 40px;
+      border-top: 1px solid #f0f0f0;
+      z-index: 1010;
+    }
+
+    .uniqo1 .uniqo1-menu-item:hover .uniqo1-dropdown,
+    .uniqo1 .uniqo1-dropdown:hover {
+      display: block;
+    }
+
+    .uniqo1 .uniqo1-mega-wrapper {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: flex;
+      min-height: 200px;
+    }
+
+    .uniqo1 .uniqo1-sidebar {
+      width: 160px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding-top: 10px;
+    }
+
+    .uniqo1 .uniqo1-side-tab {
+      font-size: 14px;
+      font-weight: 700;
+      color: #191919;
+      cursor: pointer;
+    }
+
+    .uniqo1 .uniqo1-side-tab.active,
+    .uniqo1 .uniqo1-side-tab:hover {
+      color: #ff6700;
+    }
+
+    .uniqo1 .uniqo1-content-area {
+      flex: 1;
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .uniqo1 .uniqo1-tab-content {
+      display: none;
+    }
+
+    .uniqo1 .uniqo1-tab-content.active {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .uniqo1 .uniqo1-card {
+      background: #f7f9fa;
+      border-radius: 16px;
+      padding: 20px 12px;
+      width: 180px;
+      text-align: center;
+    }
+
+    .uniqo1 .uniqo1-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .uniqo1 .uniqo1-card h4 {
+      font-size: 13px;
+      color: #191919;
+      font-weight: 400;
+    }
+
+    .uniqo1 .uniqo1-action-pill {
+      align-self: flex-end;
+      margin-top: 20px;
+      background: #f4f4f4;
+      border-radius: 20px;
+      padding: 8px 18px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .uniqo1 .uniqo1-action-pill a {
+      text-decoration: none;
+      color: #333;
+      font-size: 13px;
+    }
+
+    .uniqo1 .uniqo1-text-grid {
+      display: flex;
+      gap: 120px;
+      padding-top: 10px;
+    }
+
+    .uniqo1 .uniqo1-text-column h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .uniqo1 .uniqo1-text-column h3 a {
+      color: #191919;
+      text-decoration: none;
+    }
+
+    .uniqo1 .uniqo1-text-column ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .uniqo1 .uniqo1-text-column a {
+      text-decoration: none;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .uniqo1 .uniqo1-text-column a:hover {
+      color: #ff6700;
+    }
+
+    /* Profile Popup */
+    .uniqo1 .uniqo1-user-wrapper {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .uniqo1 .uniqo1-user-popup {
+      position: absolute;
+      top: 52px;
+      right: -10px;
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      border-radius: 8px;
+      width: 130px;
+      display: none;
+      flex-direction: column;
+      padding: 6px 0;
+      z-index: 1002;
+    }
+
+    .uniqo1 .uniqo1-user-popup::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: 0;
+      width: 100%;
+      height: 15px;
+    }
+
+    .uniqo1 .uniqo1-user-wrapper:hover .uniqo1-user-popup,
+    .uniqo1 .uniqo1-user-popup:hover {
+      display: flex;
+    }
+
+    .uniqo1 .uniqo1-user-popup a {
+      padding: 10px 20px;
+      font-size: 14px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .uniqo1 .uniqo1-user-popup a:hover {
+      color: #ff6700;
+      background-color: #fafafa;
+    }
+
+    /* ========================================================
+       2. BACKGROUND BLUR OVERLAY EFFECT
+       ======================================================== */
+    .uniqo1-page-overlay {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .uniqo1-page-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* ========================================================
+       3. SEARCH OVERLAY PAGE STYLES
+       ======================================================== */
+    .uniqo1-search-page {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #ffffff;
+      z-index: 2000;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+    }
+
+    .uniqo1-search-page.active {
+      display: flex;
+    }
+
+    .uniqo1-search-header {
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .uniqo1-search-close {
+      font-size: 24px;
+      color: #666666;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .uniqo1-search-close:hover {
+      color: #ff6700;
+    }
+
+    .uniqo1-search-body {
+      max-width: 600px;
+      width: 90%;
+      margin: 40px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .uniqo1-search-input-wrapper {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .uniqo1-search-input-wrapper i {
+      position: absolute;
+      left: 20px;
+      font-size: 18px;
+      color: #888888;
+    }
+
+    .uniqo1-search-input {
+      width: 100%;
+      height: 52px;
+      padding: 0 20px 0 52px;
+      font-size: 16px;
+      color: #333333;
+      border: 1px solid #ff6700;
+      border-radius: 26px;
+      outline: none;
+      box-shadow: 0 2px 10px rgba(255, 103, 0, 0.08);
+    }
+
+    .uniqo1-trending-section {
+      width: 100%;
+      margin-top: 35px;
+      padding-left: 20px;
+    }
+
+    .uniqo1-trending-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #757575;
+      margin-bottom: 20px;
+    }
+
+    .uniqo1-trending-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .uniqo1-trending-list a {
+      text-decoration: none;
+      color: #555555;
+      font-size: 15px;
+      transition: color 0.2s ease;
+    }
+
+    .uniqo1-trending-list a:hover {
+      color: #ff6700;
+    }
+
+    .uniqo1-support-section {
+      width: 100%;
+      background-color: #f7f7f7;
+      padding: 40px 20px 80px 20px;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .uniqo1-support-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #191919;
+      margin-bottom: 30px;
+    }
+
+    .uniqo1-support-cards {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .uniqo1-support-card {
+      flex: 1;
+      background: #ffffff;
+      height: 120px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    @media (max-width: 992px) {
+      .uniqo1 .uniqo1-toggle { display: block; }
+      .uniqo1 .uniqo1-extra-links { display: none; }
+      .uniqo1 .uniqo1-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 20px;
+        display: none;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+      .uniqo1 .uniqo1-menu.active { display: flex; }
+      .uniqo1 .uniqo1-dropdown { position: static; box-shadow: none; padding: 10px 0; }
+      .uniqo1-search-header { padding: 15px 20px; }
+      .uniqo1-support-cards { flex-direction: column; }
+    }
+
+    /* ========================================================
+       4. SUB NAVBAR STYLES (.v2-0-navbar)
+       ======================================================== */
+    .v2-0-navbar {
+      position: relative;
+      z-index: 999;
+      width: 100%;
+      min-height: 98px;
+      padding: 0 clamp(20px, 3vw, 50px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      background: #ffffff;
+      border-top: 6px solid #f7f7f7;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .v2-0-left-section {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: clamp(35px, 5vw, 75px);
+    }
+
+    .v2-0-logo {
+      flex-shrink: 0;
+      color: #242424;
+      font-size: clamp(25px, 2.1vw, 35px);
+      font-weight: 600;
+      line-height: 1;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .v2-0-navigation {
+      display: flex;
+      align-items: center;
+    }
+
+    .v2-0-menu {
+      display: flex;
+      align-items: center;
+      gap: clamp(24px, 3vw, 48px);
+      list-style: none;
+    }
+
+    .v2-0-menu-item {
+      flex-shrink: 0;
+    }
+
+    .v2-0-menu-link {
+      position: relative;
+      display: inline-block;
+      padding: 10px 0;
+      color: #626262;
+      font-size: clamp(16px, 1.2vw, 20px);
+      font-weight: 400;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.25s ease;
+    }
+
+    .v2-0-menu-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 3px;
+      width: 0;
+      height: 2px;
+      background: #222222;
+      transition: width 0.25s ease;
+    }
+
+    .v2-0-menu-link:hover,
+    .v2-0-menu-link:focus-visible,
+    .v2-0-menu-link.v2-0-active {
+      color: #222222;
+    }
+
+    .v2-0-menu-link:hover::after,
+    .v2-0-menu-link:focus-visible::after,
+    .v2-0-menu-link.v2-0-active::after {
+      width: 100%;
+    }
+
+    .v2-0-right-section {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 1.5vw, 22px);
+    }
+
+    .v2-0-price {
+      color: #242424;
+      font-size: clamp(18px, 1.4vw, 23px);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .v2-0-buy-button {
+      min-width: 140px;
+      min-height: 46px;
+      padding: 12px 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      background: #191919;
+      border: 2px solid #191919;
+      border-radius: 17px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    }
+
+    .v2-0-buy-button:hover {
+      background: #333333;
+      border-color: #333333;
+      transform: translateY(-1px);
+    }
+
+    .v2-0-menu-toggle {
+      width: 44px;
+      height: 44px;
+      padding: 9px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      background: transparent;
+      border: 0;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .v2-0-menu-toggle-line {
+      width: 25px;
+      height: 2px;
+      display: block;
+      background: #222222;
+      border-radius: 5px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    @media (max-width: 1100px) {
+      .v2-0-navbar { gap: 20px; }
+      .v2-0-left-section { gap: 30px; }
+      .v2-0-menu { gap: 24px; }
+      .v2-0-buy-button { min-width: 125px; padding-inline: 22px; }
+    }
+
+    @media (max-width: 850px) {
+      .v2-0-navbar {
+        min-height: 76px;
+        padding: 14px 20px;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .v2-0-left-section { width: auto; flex: 1; }
+      .v2-0-menu-toggle { display: flex; order: 2; }
+      .v2-0-navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        display: block;
+        background: #ffffff;
+        border-top: 1px solid transparent;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: max-height 0.35s ease, opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+      }
+      .v2-0-navigation.v2-0-menu-open {
+        max-height: 350px;
+        padding: 12px 20px 20px;
+        border-top-color: #eeeeee;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .v2-0-menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+      .v2-0-menu-link {
+        width: 100%;
+        padding: 15px 5px;
+        display: block;
+        border-bottom: 1px solid #eeeeee;
+        font-size: 17px;
+      }
+      .v2-0-menu-item:last-child .v2-0-menu-link { border-bottom: 0; }
+      .v2-0-menu-link::after { display: none; }
+      .v2-0-right-section { order: 3; }
+      .v2-0-menu-toggle.v2-0-toggle-active .v2-0-menu-toggle-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .v2-0-menu-toggle.v2-0-toggle-active .v2-0-menu-toggle-line:nth-child(2) { opacity: 0; }
+      .v2-0-menu-toggle.v2-0-toggle-active .v2-0-menu-toggle-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+
+    @media (max-width: 600px) {
+      .v2-0-navbar { padding: 13px 15px; }
+      .v2-0-left-section { width: calc(100% - 60px); }
+      .v2-0-right-section {
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12px;
+      }
+      .v2-0-buy-button {
+        min-width: 118px;
+        min-height: 42px;
+        padding: 10px 20px;
+        border-radius: 14px;
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================================
+       5. HERO SLIDER STYLES (.v2_0-slider-wrapper)
+       ======================================================== */
+    .v2_0-slider-wrapper {
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      min-height: 380px;
+      max-height: 500px;
+      background-color: #08050a;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .v2_0-slides-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .v2_0-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+      z-index: 1;
+    }
+
+    .v2_0-slide.v2_0-active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 2;
+    }
+
+    .v2_0-slide-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .v2_0-slide-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .v2_0-slide-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.4) 100%);
+      z-index: 2;
+    }
+
+    .v2_0-slide-content {
+      position: relative;
+      z-index: 3;
+      width: 90%;
+      max-width: 1350px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 0 50px 0;
+    }
+
+    .v2_0-brand-logo {
+      position: absolute;
+      top: 25px;
+      right: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      z-index: 4;
+    }
+
+    .v2_0-logo-text {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #ffffff;
+    }
+
+    .v2_0-leica-tag {
+      font-size: 0.55rem;
+      letter-spacing: 1px;
+      color: #cccccc;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .v2_0-leica-badge {
+      background-color: #e60012;
+      color: #fff;
+      font-size: 0.55rem;
+      font-weight: bold;
+      padding: 1px 5px;
+      border-radius: 8px;
+      font-family: serif;
+    }
+
+    .v2_0-text-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      max-width: 480px;
+    }
+
+    .v2_0-main-heading {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.15;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .v2_0-price-text {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #e0e0e0;
+      line-height: 1.3;
+    }
+
+    .v2_0-btn-cta {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 8px 24px;
+      background-color: #ffffff;
+      color: #000000;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .v2_0-btn-cta:hover {
+      background-color: #e5e5e5;
+      transform: translateY(-2px);
+    }
+
+    .v2_0-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+
+    .v2_0-nav-btn:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .v2_0-prev-btn { left: 15px; }
+    .v2_0-next-btn { right: 15px; }
+
+    .v2_0-disclaimer {
+      position: absolute;
+      bottom: 35px;
+      right: 5%;
+      z-index: 10;
+      font-size: 0.65rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .v2_0-indicators-bar {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 75%;
+      max-width: 650px;
+    }
+
+    .v2_0-bars-group {
+      display: flex;
+      flex: 1;
+      gap: 8px;
+    }
+
+    .v2_0-bar {
+      flex: 1;
+      height: 2px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: height 0.2s ease;
+    }
+
+    .v2_0-bar:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .v2_0-bar.v2_0-active {
+      height: 3px;
+    }
+
+    .v2_0-bar.v2_0-active::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background-color: #ff5000;
+      border-radius: 2px;
+      animation: v2_0-progressFill 4s linear forwards;
+    }
+
+    .v2_0-slider-wrapper.v2_0-paused .v2_0-bar.v2_0-active::after {
+      animation-play-state: paused;
+    }
+
+    @keyframes v2_0-progressFill {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+
+    .v2_0-play-pause-btn {
+      background: none;
+      border: none;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .v2_0-play-pause-btn:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 992px) {
+      .v2_0-slider-wrapper {
+        height: 45vh;
+        min-height: 340px;
+      }
+      .v2_0-main-heading { font-size: 1.8rem; }
+      .v2_0-price-text { font-size: 0.9rem; }
+    }
+
+    @media (max-width: 576px) {
+      .v2_0-slider-wrapper {
+        height: 40vh;
+        min-height: 300px;
+      }
+      .v2_0-brand-logo { top: 15px; right: 15px; }
+      .v2_0-logo-text { font-size: 1.2rem; }
+      .v2_0-main-heading { font-size: 1.4rem; }
+      .v2_0-price-text { font-size: 0.8rem; }
+      .v2_0-btn-cta { padding: 6px 18px; font-size: 0.75rem; }
+      .v2_0-nav-btn { width: 30px; height: 30px; font-size: 0.75rem; }
+      .v2_0-prev-btn { left: 8px; }
+      .v2_0-next-btn { right: 8px; }
+      .v2_0-disclaimer { display: none; }
+      .v2_0-indicators-bar { width: 85%; bottom: 10px; }
+    }
+
+    /* ========================================================
+       6. FEATURED PRODUCTS SECTION STYLES (.container-ss1)
+       ======================================================== */
+    .container-ss1 {
+      width: 100%;
+      max-width: 1100px;
+      margin: 40px auto; /* FIXED: Centered on screen */
+      padding: 0 20px;
+    }
+
+    .section-title-ss1 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    /* Navigation Tabs */
+    .tabs-nav-ss1 {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .tab-btn-ss1 {
+      background: none;
+      border: none;
+      font-size: 15px;
+      font-weight: 600;
+      color: #333;
+      padding-bottom: 8px;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .tab-btn-ss1.active-ss1 {
+      color: #ff6700;
+    }
+
+    .tab-btn-ss1.active-ss1::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ff6700;
+    }
+
+    /* Main Container Box */
+    .tab-content-ss1 {
+      display: none;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .tab-content-ss1.active-ss1 {
+      display: block;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero Banner Grid */
+    .hero-banner-ss1 {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .hero-img-container-ss1 {
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+    }
+
+    .hero-img-container-ss1 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-info-ss1 {
+      padding: 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-info-ss1 h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .hero-info-ss1 p {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .learn-btn-ss1 {
+      background-color: #1c1c1e;
+      color: #fff;
+      padding: 8px 24px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+
+    .learn-btn-ss1:hover {
+      background-color: #333;
+    }
+
+    /* Products Grid */
+    .products-grid-ss1 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .product-card-ss1 {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      padding: 20px 15px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card-ss1:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-card-ss1 img {
+      max-width: 100%;
+      height: 110px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .product-title-ss1 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .product-price-ss1 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111;
+    }
+
+    .price-prefix-ss1 {
+      font-weight: 400;
+      color: #777;
+      font-size: 12px;
+    }
+
+    .original-price-ss1 {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 11px;
+      margin-left: 4px;
+      font-weight: 400;
+    }
+
+    /* Mobile & Tablet Responsiveness */
+    @media (max-width: 900px) {
+      .products-grid-ss1 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-banner-ss1 {
+        grid-template-columns: 1fr;
+      }
+      .hero-img-container-ss1 {
+        height: 200px;
+      }
+      .tabs-nav-ss1 {
+        gap: 15px;
+      }
+      .tab-btn-ss1 {
+        font-size: 13px;
+      }
+      .products-grid-ss1 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .product-card-ss1 {
+        padding: 15px 10px;
+      }
+    }
+
+ 
+    .offers-section {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    /* Header & Nav Buttons */
+    .offers-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .offers-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #111;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      right: 0;
+      display: flex;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+      background-color: #e0e0e0;
+      color: #555;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      background-color: #d0d0d0;
+      color: #000;
+    }
+
+    /* Slider Track */
+    .slider-container {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+      /* Scrollbar Hide */
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* IE/Edge */
+    }
+
+    .slider-container::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
+    /* Individual Card Styles */
+    .offer-card {
+      flex: 0 0 calc(33.333% - 14px); /* 3 cards per row on desktop */
+      min-width: 280px;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-image-wrapper {
+      width: 100%;
+      height: 200px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #f0f0f0;
+      margin-bottom: 20px;
+    }
+
+    .card-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: 100%;
+      padding: 0 8px 10px 8px;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .card-subtitle {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    /* Responsiveness Rules */
+    @media (max-width: 900px) {
+      .offer-card {
+        flex: 0 0 calc(50% - 10px); /* 2 cards on tablet */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .offers-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+      }
+      .nav-buttons {
+        position: static;
+      }
+      .offer-card {
+        flex: 0 0 85%; /* Single prominent card on mobile */
+      }
+    }
+
+<!--
+  page exploer Xiaomi-->
+
+
+
+
+
+    /* Outer Wrapper Section */
+    .explore-section-ss-2 {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 24px 0;
+      position: relative;
+    }
+
+    /* Top Header with Centered Title and Absolutely Positioned Navigation Buttons */
+    .explore-header-ss-2 {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 28px;
+      padding: 0 12px;
+      min-height: 40px;
+    }
+
+    .explore-title-ss-2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: -0.5px;
+      text-align: center;
+    }
+
+    .controls-wrapper-ss-2 {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-btn-ss-2 {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #e0e0e0;
+      border: none;
+      color: #333333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      outline: none;
+      user-select: none;
+    }
+
+    .nav-btn-ss-2:hover:not(:disabled) {
+      background-color: #000000;
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
+    .nav-btn-ss-2:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .nav-btn-ss-2 svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* Slider Container and Track */
+    .slider-container-ss-2 {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      border-radius: 16px;
+      padding: 4px 0 12px 0;
+      touch-action: pan-y;
+    }
+
+    .slider-track-ss-2 {
+      display: flex;
+      transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+      will-change: transform;
+    }
+
+    /* Individual Slide Card */
+    .slide-card-ss-2 {
+      flex: 0 0 33.33333%;
+      padding: 0 10px;
+      box-sizing: border-box;
+      user-select: none;
+    }
+
+    .card-inner-ss-2 {
+      background-color: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card-inner-ss-2:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Image Wrapper & Visual Content */
+    .card-media-ss-2 {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #111111;
+      overflow: hidden;
+    }
+
+    .card-img-ss-2 {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .card-inner-ss-2:hover .card-img-ss-2 {
+      transform: scale(1.03);
+    }
+
+    /* Card Text Content */
+    .card-info-ss-2 {
+      padding: 20px 16px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 90px;
+      flex-grow: 1;
+      background-color: #ffffff;
+    }
+
+    .card-title-ss-2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .card-subtitle-ss-2 {
+      font-size: 13px;
+      font-weight: 500;
+      color: #666666;
+      line-height: 1.4;
+    }
+
+    /* Bottom Dots Pagination */
+    .dots-pagination-ss-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .dot-ss-2 {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #cccccc;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0;
+    }
+
+    .dot-ss-2.active-ss-2 {
+      background-color: #ff6900; /* Xiaomi Orange Accent */
+      width: 24px;
+      border-radius: 4px;
+    }
+
+    /* Responsive Breakpoints */
+    /* Tablet Screen Layout (2 cards per view) */
+    @media (max-width: 992px) {
+      .slide-card-ss-2 {
+        flex: 0 0 50%;
+      }
+      .explore-title-ss-2 {
+        font-size: 24px;
+      }
+    }
+
+    /* Mobile Screen Layout (1 card per view) */
+    @media (max-width: 600px) {
+      .slide-card-ss-2 {
+        flex: 0 0 100%;
+      }
+      .explore-header-ss-2 {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .controls-wrapper-ss-2 {
+        position: static;
+        transform: none;
+      }
+      .explore-title-ss-2 {
+        font-size: 20px;
+      }
+      .card-info-ss-2 {
+        padding: 16px 12px 20px;
+      }
+    }
+
+
+
+
+    <!--page xiaomi support -->
+
+    
+    .support-section-ss-3 {
+      background-color: #f7f7f7;
+      padding: 60px 20px;
+      width: 100%;
+    }
+
+    .support-container-ss-3 {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .support-title-ss-3 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 40px;
+    }
+
+    .support-grid-ss-3 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .support-card-ss-3 {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px 15px;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    /* Hover Animation & Style */
+    .support-card-ss-3:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      background-color: #ffffff;
+    }
+
+    .icon-wrapper-ss-3 {
+      font-size: 48px;
+      color: #444444;
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .support-card-ss-3:hover .icon-wrapper-ss-3 {
+      color: #ff6700; /* Xiaomi Orange Theme Color */
+    }
+
+    .card-title-ss-3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 8px;
+    }
+
+    .card-desc-ss-3 {
+      font-size: 13px;
+      color: #666666;
+      line-height: 1.4;
+      max-width: 220px;
+    }
+
+    /* Responsive Grid Adjustments */
+    @media (max-width: 992px) {
+      .support-grid-ss-3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .support-grid-ss-3 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .support-title-ss-3 {
+        font-size: 22px;
+        margin-bottom: 25px;
+      }
+    }
+
+ /* Custom Styling with -ss-4 classes */
+    .footer-ss-4 {
+      background-color: #121212;
+      color: #888888;
+      font-family: Arial, sans-serif;
+    }
+
+    .title-ss-4 {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .list-unstyled-ss-4 {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    .list-unstyled-ss-4 li {
+      margin-bottom: 8px;
+    }
+
+    .link-ss-4 {
+      color: #888888;
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s ease-in-out;
+    }
+
+    .link-ss-4:hover {
+      color: #ffffff;
+    }
+
+    .social-icon-ss-4 {
+      color: #ffffff;
+      font-size: 18px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .social-icon-ss-4:hover {
+      opacity: 0.8;
+      color: #ffffff;
+    }
+
+    .input-group-ss-4 {
+      display: flex;
+      border: 1px solid #444;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .input-ss-4 {
+      background: transparent;
+      border: none;
+      padding: 10px 15px;
+      color: #fff;
+      width: 100%;
+      outline: none;
+    }
+
+    .btn-submit-ss-4 {
+      background: transparent;
+      border: none;
+      color: #fff;
+      padding: 0 15px;
+      cursor: pointer;
+    }
+
+    .app-card-ss-4 {
+      background-color: transparent;
+      border: 1px solid #333 !important;
+      border-radius: 6px;
+    }
+
+    .playstore-btn-ss-4 {
+      border: 1px solid #333 !important;
+      color: #fff;
+      padding: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      background-color: transparent;
+      transition: background-color 0.2s;
+    }
+
+    .playstore-btn-ss-4:hover {
+      background-color: #222;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .footer-ss-4 {
+        text-align: left;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       1. MAIN HEADER NAVBAR
+       ======================================================== -->
+  <header class="uniqo1">
+    <div class="uniqo1-nav">
+      
+      <div class="uniqo1-logo-container">
+        <div class="uniqo1-toggle" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <a href="#" class="uniqo1-logo">mi</a>
+      </div>
+
+      <ul class="uniqo1-menu" id="mobileMenu">
+        <li class="uniqo1-menu-item"><a href="#">Store</a></li>
+
+        <!-- PHONES -->
+        <li class="uniqo1-menu-item">
+          <a href="#">Phones</a>
+          <div class="uniqo1-dropdown">
+            <div class="uniqo1-mega-wrapper">
+              <div class="uniqo1-sidebar">
+                <span class="uniqo1-side-tab active" onclick="switchMegaTab(event, 'redmi-phones')">Redmi Phones</span>
+                <span class="uniqo1-side-tab" onclick="switchMegaTab(event, 'xiaomi-phones')">Xiaomi Phones</span>
+              </div>
+              <div class="uniqo1-content-area">
+                <div id="redmi-phones" class="uniqo1-tab-content active">
+                  <div class="uniqo1-card"><img src="./ec6f6a5b2e1ddf2d4680bd5a96adc2c7.webp" alt="REDMI Turbo 5"><h4>REDMI Turbo 5</h4></div>
+                  <div class="uniqo1-card"><img src="./2.0.webp" alt="Redmi Note 15 Pro+ 5G"><h4>Redmi Note 15 Pro+ 5G</h4></div>
+                  <div class="uniqo1-card"><img src="./3.0.webp" alt="Redmi Note 15 Pro 5G"><h4>Redmi Note 15 Pro 5G</h4></div>
+                  <div class="uniqo1-card"><img src="./4.0.webp" alt="Redmi Note 15 SE 5G"><h4>Redmi Note 15 SE 5G</h4></div>
+                  <div class="uniqo1-card"><img src="./5.0.webp" alt="Redmi Note a7 pro 5G"><h4>Redmi Note a7 pro 5G</h4></div>
+                </div>
+                <div id="xiaomi-phones" class="uniqo1-tab-content">
+                  <div class="uniqo1-card"><img src="./x1.0.webp" alt="Xiaomi 17T"><h4>Xiaomi 17T</h4></div>
+                  <div class="uniqo1-card"><img src="./x2.0.webp" alt="Xiaomi 17 Ultra"><h4>Xiaomi 17 Ultra</h4></div>
+                  <div class="uniqo1-card"><img src="./x3.0.webp" alt="Xiaomi 17"><h4>Xiaomi 17</h4></div>
+                </div>
+                <div class="uniqo1-action-pill">
+                  <a href="#"><i class="fa-solid fa-plug"></i> Accessories</a>
+                  <a href="#"><i class="fa-solid fa-border-all"></i> All Phones</a>
+                  <a href="#"><i class="fa-solid fa-border-all"></i> Compare</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- TABLETS -->
+        <li class="uniqo1-menu-item">
+          <a href="#">Tablets</a>
+          <div class="uniqo1-dropdown">
+            <div class="uniqo1-mega-wrapper">
+              <div class="uniqo1-sidebar">
+                <span class="uniqo1-side-tab active" onclick="switchMegaTab(event, 'xiaomi-pad')">Xiaomi Pad</span>
+                <span class="uniqo1-side-tab" onclick="switchMegaTab(event, 'redmi-pad')">Redmi Pad</span>
+              </div>
+              <div class="uniqo1-content-area">
+                <div id="xiaomi-pad" class="uniqo1-tab-content active">
+                  <div class="uniqo1-card"><img src="./tab1.webp" alt="Xiaomi Pad 8"><h4>Xiaomi Pad 8</h4></div>
+                  <div class="uniqo1-card"><img src="./tab2.webp" alt="Xiaomi Pad 7"><h4>Xiaomi Pad 7</h4></div>
+                </div>
+                <div id="redmi-pad" class="uniqo1-tab-content">
+                  <div class="uniqo1-card"><img src="./tab3.0.webp" alt="Redmi Pad 2 Pro"><h4>Redmi Pad 2 Pro</h4></div>
+                  <div class="uniqo1-card"><img src="./tab4.0.webp" alt="Redmi Pad 2 Pro 5G"><h4>Redmi Pad 2 Pro 5G</h4></div>
+                  <div class="uniqo1-card"><img src="./tab5.0.webp" alt="Redmi Pad 2 Wifi + Cellular"><h4>Redmi Pad 2 Wifi + Cellular</h4></div>
+                  <div class="uniqo1-card"><img src="./tab6.0.webp" alt="Redmi Pad 2 Wi-Fi"><h4>Redmi Pad 2 Wi-Fi</h4></div>
+                  <div class="uniqo1-card"><img src="./tab7.0.webp" alt="Redmi Pad Pro 5G"><h4>Redmi Pad Pro 5G</h4></div>
+                </div>
+                <div class="uniqo1-action-pill">
+                  <a href="#"><i class="fa-solid fa-plug"></i> Accessories</a>
+                  <a href="#"><i class="fa-solid fa-border-all"></i> All Xiaomi Pad</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- TV & SMART HOME -->
+        <li class="uniqo1-menu-item">
+          <a href="#">TV & Smart Home</a>
+          <div class="uniqo1-dropdown">
+            <div class="uniqo1-mega-wrapper">
+              <div class="uniqo1-text-grid">
+                <div class="uniqo1-text-column">
+                  <h3><a href="#">TV</a></h3>
+                  <ul>
+                    <li><a href="#">Xiaomi TV</a></li>
+                    <li><a href="#">TV Accessories</a></li>
+                  </ul>
+                </div>
+                <div class="uniqo1-text-column">
+                  <h3><a href="#">Smart Home</a></h3>
+                  <ul>
+                    <li><a href="#">Air Purifier</a></li>
+                    <li><a href="#">Vacuum Cleaner Accessories</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- SMART WATCH & AUDIO -->
+        <li class="uniqo1-menu-item">
+          <a href="#">Smart Watch & Audio</a>
+          <div class="uniqo1-dropdown">
+            <div class="uniqo1-mega-wrapper">
+              <div class="uniqo1-text-grid">
+                <div class="uniqo1-text-column">
+                  <h3><a href="#">Audio</a></h3>
+                  <ul>
+                    <li><a href="#">Earbuds</a></li>
+                    <li><a href="#">Wired Earphones</a></li>
+                    <li><a href="#">Speakers</a></li>
+                  </ul>
+                </div>
+                <div class="uniqo1-text-column">
+                  <h3><a href="#">Lifestyle</a></h3>
+                  <ul>
+                    <li><a href="#">Smart Watch</a></li>
+                    <li><a href="#">Grooming</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Right Section Utilities -->
+      <div class="uniqo1-right">
+        <ul class="uniqo1-extra-links">
+          <li><a href="#">Discover</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+
+        <div class="uniqo1-icons">
+          <a class="uniqo1-icon-btn" onclick="openSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="#" class="uniqo1-icon-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+          
+          <div class="uniqo1-user-wrapper">
+            <a href="#" class="uniqo1-icon-btn"><i class="fa-regular fa-user"></i></a>
+            <div class="uniqo1-user-popup">
+              <a href="#">Sign In</a>
+              <a href="#">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- BACKGROUND BLUR OVERLAY ELEMENT -->
+  <div class="uniqo1-page-overlay" id="pageOverlay"></div>
+
+  <!-- ========================================================
+       2. SUB NAVBAR (PRODUCT HEADER)
+       ======================================================== -->
+  <header class="v2-0-navbar">
+    <div class="v2-0-left-section">
+      <a href="#" class="v2-0-logo">Xiaomi 17</a>
+
+      <nav class="v2-0-navigation" id="v2-0-navigation" aria-label="Product navigation">
+        <ul class="v2-0-menu">
+          <li class="v2-0-menu-item"><a href="#overview" class="v2-0-menu-link">Overview</a></li>
+          <li class="v2-0-menu-item"><a href="#specs" class="v2-0-menu-link">Specs</a></li>
+          <li class="v2-0-menu-item"><a href="#review" class="v2-0-menu-link">Review</a></li>
+          <li class="v2-0-menu-item"><a href="#faq" class="v2-0-menu-link">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <button type="button" class="v2-0-menu-toggle" aria-label="Open navigation menu" aria-controls="v2-0-navigation" aria-expanded="false">
+      <span class="v2-0-menu-toggle-line"></span>
+      <span class="v2-0-menu-toggle-line"></span>
+      <span class="v2-0-menu-toggle-line"></span>
+    </button>
+
+    <div class="v2-0-right-section">
+      <span class="v2-0-price">₹89,999</span>
+      <a href="#buy" class="v2-0-buy-button">Buy Now</a>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       3. SEARCH FULL OVERLAY PAGE
+       ======================================================== -->
+  <div class="uniqo1-search-page" id="searchPage">
+    <div class="uniqo1-search-header">
+      <a href="#" class="uniqo1-logo">mi</a>
+      <div class="uniqo1-search-close" onclick="closeSearch()">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+
+    <div class="uniqo1-search-body">
+      <div class="uniqo1-search-input-wrapper">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="uniqo1-search-input" placeholder="Redmi 13 5g" id="searchInput">
+      </div>
+
+      <div class="uniqo1-trending-section">
+        <h4 class="uniqo1-trending-title">Trending</h4>
+        <ul class="uniqo1-trending-list">
+          <li><a href="#">REDMI Turbo 5</a></li>
+          <li><a href="#">Xiaomi 17T</a></li>
+          <li><a href="#">Redmi Note 15 5g</a></li>
+          <li><a href="#">Redmi 15c 5g</a></li>
+          <li><a href="#">Redmi 15a 5g</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="uniqo1-support-section">
+      <h2 class="uniqo1-support-title">Xiaomi Support</h2>
+      <div class="uniqo1-support-cards">
+        <div class="uniqo1-support-card"></div>
+        <div class="uniqo1-support-card"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       4. HERO SLIDER SECTION
+       ======================================================== -->
+  <section class="v2_0-slider-wrapper" id="v2_0-slider">
+    <div class="v2_0-slides-container">
+      
+      <!-- SLIDE 1 -->
+      <div class="v2_0-slide v2_0-active">
+        <div class="v2_0-slide-bg">
+          <img src="./3c4ebc510a455aa26488c4ca054cc66a.jpg" alt="Xiaomi 17T Banner" />
+        </div>
+        <div class="v2_0-slide-content">
+          <div class="v2_0-brand-logo">
+            <span class="v2_0-logo-text">XIAOMI 17T</span>
+            <span class="v2_0-leica-tag">CO-ENGINEERED WITH <span class="v2_0-leica-badge">Leica</span></span>
+          </div>
+          <div class="v2_0-text-box">
+            <h1 class="v2_0-main-heading">Segment's only<br />5x Telephoto Zoom</h1>
+            <p class="v2_0-price-text">Starting at ₹9,166 /month</p>
+            <a href="#" class="v2_0-btn-cta">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div class="v2_0-slide">
+        <div class="v2_0-slide-bg">
+          <img src="./top slide bar 1_files/155cfbbbbc8240554135e48977b6efc3.jpg" alt="Xiaomi TV 75" />
+        </div>
+        <div class="v2_0-slide-content">
+          <div class="v2_0-text-box">
+            <h1 class="v2_0-main-heading">Xiaomi TV FX Mini<br />LED 75</h1>
+            <p class="v2_0-price-text">75" of Cinematic Excellence<br />Starting at ₹8,888/month</p>
+            <a href="#" class="v2_0-btn-cta">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 -->
+      <div class="v2_0-slide">
+        <div class="v2_0-slide-bg">
+          <img src="./Xiaomi Official Store - Xiaomi India_files/6f33860bdfb993c4360f89f974aa4992.png" alt="Xiaomi Pad" />
+        </div>
+        <div class="v2_0-slide-content">
+          <div class="v2_0-text-box">
+            <h1 class="v2_0-main-heading">Xiaomi Pad Pro<br />12.4 Display</h1>
+            <p class="v2_0-price-text">Work & Play Seamlessly<br />Starting at ₹3,499/month</p>
+            <a href="#" class="v2_0-btn-cta">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4 -->
+      <div class="v2_0-slide">
+        <div class="v2_0-slide-bg">
+          <img src="./Xiaomi Official Store - Xiaomi India_files/c4e4079cfd45a6e79d187a8cf10ce1b3.png" alt="Xiaomi Watch" />
+        </div>
+        <div class="v2_0-slide-content">
+          <div class="v2_0-text-box">
+            <h1 class="v2_0-main-heading">Xiaomi Smart Watch<br />Ultra Series</h1>
+            <p class="v2_0-price-text">Track Your Health Better<br />Starting at ₹1,299/month</p>
+            <a href="#" class="v2_0-btn-cta">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 5 -->
+      <div class="v2_0-slide">
+        <div class="v2_0-slide-bg">
+          <img src="Xiaomi Official Store - Xiaomi India22_files/84ef7e6113240d321094c1f96266ab06.png" alt="Redmi Note" />
+        </div>
+        <div class="v2_0-slide-content">
+          <div class="v2_0-text-box">
+            <h1 class="v2_0-main-heading">Redmi Note Series<br />5G Power</h1>
+            <p class="v2_0-price-text">Superfast Performance<br />Starting at ₹2,199/month</p>
+            <a href="#" class="v2_0-btn-cta">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="v2_0-nav-btn v2_0-prev-btn" id="v2_0-prev" aria-label="Previous Slide">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="v2_0-nav-btn v2_0-next-btn" id="v2_0-next" aria-label="Next Slide">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Bottom Disclaimer -->
+    <p class="v2_0-disclaimer">*Disclaimer : the Net Effective Price is inclusive of all offers</p>
+
+    <!-- Bottom Indicators Bar -->
+    <div class="v2_0-indicators-bar">
+      <div class="v2_0-bars-group">
+        <span class="v2_0-bar v2_0-active"></span>
+        <span class="v2_0-bar"></span>
+        <span class="v2_0-bar"></span>
+        <span class="v2_0-bar"></span>
+        <span class="v2_0-bar"></span>
+      </div>
+      <button class="v2_0-play-pause-btn" id="v2_0-toggle-play" aria-label="Pause/Play">
+        <i class="fa-solid fa-pause"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. FEATURED PRODUCTS SECTION
+       ======================================================== -->
+  <div class="container-ss1">
+    <h2 class="section-title-ss1">Featured Products</h2>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs-nav-ss1">
+      <button class="tab-btn-ss1 active-ss1" onclick="switchFeaturedTab(event, 'phones')">Phones</button>
+      <button class="tab-btn-ss1" onclick="switchFeaturedTab(event, 'tvs')">Smart TVs</button>
+      <button class="tab-btn-ss1" onclick="switchFeaturedTab(event, 'tablets')">Tablets</button>
+      <button class="tab-btn-ss1" onclick="switchFeaturedTab(event, 'lifestyle')">Lifestyle</button>
+    </div>
+
+    <!-- PHONES TAB -->
+    <div id="phones" class="tab-content-ss1 active-ss1">
+      <div class="hero-banner-ss1">
+        <div class="hero-img-container-ss1">
+          <img src="./qa1.webp" alt="Phones Hero">
+        </div>
+        <div class="hero-info-ss1">
+          <h3>Phones</h3>
+          <p>Flagship performance, stunning displays.</p>
+          <a href="#" class="learn-btn-ss1">Learn More</a>
+        </div>
+      </div>
+      <div class="products-grid-ss1">
+        <div class="product-card-ss1">
+          <img src="./qa2.webp" alt="Xiaomi 17T">
+          <div class="product-title-ss1">Xiaomi 17T</div>
+          <div class="product-price-ss1"><span class="price-prefix-ss1">From </span>₹59,999 <span class="original-price-ss1">₹84,999</span></div>
+        </div>
+        <div class="product-card-ss1">
+          <img src="./qa3.webp" alt="REDMI Turbo 5">
+          <div class="product-title-ss1">REDMI Turbo 5</div>
+          <div class="product-price-ss1"><span class="price-prefix-ss1">From </span>₹37,999 <span class="original-price-ss1">₹54,999</span></div>
+        </div>
+        <div class="product-card-ss1">
+          <img src="./qa4.webp" alt="Redmi Note 15 Pro 5G">
+          <div class="product-title-ss1">Redmi Note 15 Pro 5G</div>
+          <div class="product-price-ss1"><span class="price-prefix-ss1">From </span>₹31,999 <span class="original-price-ss1">₹43,999</span></div>
+        </div>
+        <div class="product-card-ss1">
+          <img src="./qa5.webp" alt="Redmi Note 15 Pro+ 5G">
+          <div class="product-title-ss1">Redmi Note 15 Pro+ 5G</div>
+          <div class="product-price-ss1"><span class="price-prefix-ss1">From </span>₹39,999 <span class="original-price-ss1">₹49,999</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SMART TVs TAB -->
+    <div id="tvs" class="tab-content-ss1">
+      <div class="hero-banner-ss1">
+        <div class="hero-img-container-ss1">
+          <img src="./tv1.webp" alt="Smart TVs Hero">
+        </div>
+        <div class="hero-info-ss1">
+          <h3>Xiaomi TVs</h3>
+          <p>Beyond Watching. Start Experiencing</p>
+          <a href="#" class="learn-btn-ss1">Learn More</a>
+        </div>
+      </div>
+      <div class="products-grid-ss1">
+        <div class="product-card-ss1">
+          <img src="./tv2.webp" alt="Xiaomi TV FX Mini LED 75">
+          <div class="product-title-ss1">Xiaomi TV FX Mini LED 75</div>
+          <div class="product-price-ss1">₹84,999 <span class="original-price-ss1">₹1,39,999</span></div>
+        </div>
+        <div class="product-card-ss1">
+          <img src="./tv3.webp" alt="Xiaomi TV FX Mini LED 65">
+          <div class="product-title-ss1">Xiaomi TV FX Mini LED 65</div>
+          <div class="product-price-ss1">₹64,999 <span class="original-price-ss1">₹99,999</span></div>
+        </div>
+        <div class="product-card-ss1">
+          <img src="./tv4.webp" alt="Xiaomi TV FX Mini LED 55">
+          <div class="product-title-ss1">Xiaomi TV FX Mini LED 55</div>
+          <div class="product-price-ss1">₹44,999 <span class="original-price-ss1">₹74,999</span></div>
+        </div>
+        <div class="product-card-ss1">
+          <img src="./tv5.webp" alt="Xiaomi TV FX Mini LED 43">
+          <div class="product-title-ss1">Xiaomi TV FX Mini LED 43</div>
+          <div class="product-price-ss1">₹32,999 <span class="original-price-ss1">₹49,999</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABLETS TAB -->
+    <div id="tablets" class="tab-content-ss1">
+      <div class="hero-banner-ss1">
+        <div class="hero-img-container-ss1">
+          <img src="ta1.webp" alt="Tablets Hero">
+        </div>
+        <div class="hero-info-ss1">
+          <h3>Tablets</h3>
+          <p>Does It All</p>
+          <a href="#" class="learn-btn-ss1">Learn More</a>
+        </div>
+      </div>
+      <div class="products-grid-ss1">
+        <div class="product-card-ss1">
+          <img src="./ta2.webp" alt="Xiaomi Pad 8">
+          <div class="product-title-ss1">Xiaomi Pad 8</div>
+          <div class="product-price-ss1"><span class="price-prefix-ss1">From </span>₹37,999 <span class="original-price-ss1">₹43,999</span></div>
+        </div>
+        <div class="product-card-ss1">
+          <img src="./ta3.webp" alt="Redmi Pad 2 Pro">
+          <div class="product-title-ss1">Redmi Pad 2 Pro</div>
+          <div class="product-price-ss1">₹27,999 <span class="original-price-ss1">₹29,999</span></div>
+        </div>
+        <div class="product-card-ss1">
+          <img src="./ta4.webp" alt="Xiaomi Pad 7">
+          <div class="product-title-ss1">Xiaomi Pad 7</div>
+          <div class="product-price-ss1">₹33,999 <span class="original-price-ss1">₹39,999</span></div>
+        </div>
+        <div class="product-card-ss1">
+          <img src="./ta5.webp" alt="Redmi Pad Pro 5G">
+          <div class="product-title-ss1">Redmi Pad Pro 5G</div>
+          <div class="product-price-ss1"><span class="price-prefix-ss1">From </span>₹22,999 <span class="original-price-ss1">₹27,999</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIFESTYLE TAB -->
+    <div id="lifestyle" class="tab-content-ss1">
+      <div class="hero-banner-ss1">
+        <div class="hero-img-container-ss1">
+          <img src="./li1.webp" alt="Lifestyle Hero">
+        </div>
+        <div class="hero-info-ss1">
+          <h3>Lifestyle Products</h3>
+          <p>Style. Comfort. You - Redefined.</p>
+          <a href="#" class="learn-btn-ss1">Learn More</a>
+        </div>
+      </div>
+      <div class="products-grid-ss1">
+        <div class="product-card-ss1">
+          <img src="./li2.webp" alt="Redmi Watch Move">
+          <div class="product-title-ss1">Redmi Watch Move</div>
+          <div class="product-price-ss1">₹2,499 <span class="original-price-ss1">₹3,999</span></div>
+        </div>
+        <div class="product-card-ss1">
+          <img src="./li3.webp" alt="Redmi Watch 5 Lite">
+          <div class="product-title-ss1">Redmi Watch 5 Lite</div>
+          <div class="product-price-ss1">₹3,999 <span class="original-price-ss1">₹6,000</span></div>
+        </div>
+        <div class="product-card-ss1">
+          <img src="./li4.webp" alt="Redmi Buds 5C">
+          <div class="product-title-ss1">Redmi Buds 5C</div>
+          <div class="product-price-ss1">₹1,799 <span class="original-price-ss1">₹4,999</span></div>
+        </div>
+        <div class="product-card-ss1">
+          <img src="./li5.webp" alt="Redmi Buds 6">
+          <div class="product-title-ss1">Redmi Buds 6</div>
+          <div class="product-price-ss1">₹2,999 <span class="original-price-ss1">₹4,999</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ========================================================
+       6. JAVASCRIPT LOGIC
+       ======================================================== -->
+
+       
+
+
+       <!-- page Exclusive Offers-->
+
+
+
+  <section class="offers-section">
+    <!-- Header with centered title and right side buttons -->
+    <div class="offers-header">
+      <h2 class="offers-title">Exclusive Offers</h2>
+      <div class="nav-buttons">
+        <button class="nav-btn" id="prevBtn" aria-label="Previous Slide">&#10094;</button>
+        <button class="nav-btn" id="nextBtn" aria-label="Next Slide">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- Scrollable Cards Track -->
+    <div class="slider-container" id="slider">
+      
+      <!-- Card 1 -->
+      <div class="offer-card">
+        <div class="card-image-wrapper">
+          <img src="./qw1.webp" alt="New User Zone">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">New User Zone</h3>
+          <p class="card-subtitle">Get the Xiaomi Store App</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="offer-card">
+        <div class="card-image-wrapper">
+          <img src="./qw2.webp" alt="Xiaomi Exchange">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Xiaomi Exchange</h3>
+          <p class="card-subtitle">Smartest way to upgrade</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="offer-card">
+        <div class="card-image-wrapper">
+          <img src="./qw3.webp" alt="Xiaomi Rewards Club">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Xiaomi Rewards Club</h3>
+          <p class="card-subtitle">Earn & Save Big!</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="offer-card">
+        <div class="card-image-wrapper">
+          <img src="./qw4.webp" alt="Spotify Offer">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Free Spotify Premium</h3>
+          <p class="card-subtitle">Enjoy up to 4 Months of Ad-free Music</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="offer-card">
+        <div class="card-image-wrapper">
+          <img src="./qw5.webp" alt="Student Offers">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Exclusive Student Offers</h3>
+          <p class="card-subtitle">Special discounts for students</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!--
+  page Explore Xiaomi  -->
+
+
+
+    <!-- Explore Xiaomi Section Wrapper -->
+  <section class="explore-section-ss-2" aria-label="Explore Xiaomi Showcase">
+    
+    <!-- Top Header Bar with Centered Heading -->
+    <div class="explore-header-ss-2">
+      <h2 class="explore-title-ss-2">Explore Xiaomi</h2>
+      <div class="controls-wrapper-ss-2">
+        <button class="nav-btn-ss-2 prev-btn-ss-2" id="prevBtn-ss-2" aria-label="Previous Slide">
+          <svg viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+        </button>
+        <button class="nav-btn-ss-2 next-btn-ss-2" id="nextBtn-ss-2" aria-label="Next Slide">
+          <svg viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Carousel Viewport Container -->
+    <div class="slider-container-ss-2" id="sliderContainer-ss-2">
+      <div class="slider-track-ss-2" id="sliderTrack-ss-2">
+
+        <!-- Slide 1 -->
+        <div class="slide-card-ss-2">
+          <div class="card-inner-ss-2">
+            <div class="card-media-ss-2">
+              <img class="card-img-ss-2" src="./vv1.webp" alt="Xiaomi Priority Club" loading="lazy">
+            </div>
+            <div class="card-info-ss-2">
+              <h3 class="card-title-ss-2">Xiaomi Priority Club</h3>
+              <p class="card-subtitle-ss-2">Engineered for Perfection</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide-card-ss-2">
+          <div class="card-inner-ss-2">
+            <div class="card-media-ss-2">
+              <img class="card-img-ss-2" src="./vv2.webp" alt="Redmi Turbo 5" loading="lazy">
+            </div>
+            <div class="card-info-ss-2">
+              <h3 class="card-title-ss-2">Redmi Turbo 5</h3>
+              <p class="card-subtitle-ss-2">IP66 | IP68 | IP69 | IP69K Water and Dust Resistance</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide-card-ss-2">
+          <div class="card-inner-ss-2">
+            <div class="card-media-ss-2">
+              <img class="card-img-ss-2" src="./vv3.webp" alt="Xiaomi 17T" loading="lazy">
+            </div>
+            <div class="card-info-ss-2">
+              <h3 class="card-title-ss-2">Xiaomi 17T</h3>
+              <p class="card-subtitle-ss-2">Segment's only 5x Telephoto Zoom</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide-card-ss-2">
+          <div class="card-inner-ss-2">
+            <div class="card-media-ss-2">
+              <img class="card-img-ss-2" src="./vv4.webp" alt="Xiaomi TV FX Mini LED Series 2026" loading="lazy">
+            </div>
+            <div class="card-info-ss-2">
+              <h3 class="card-title-ss-2">Xiaomi TV FX Mini LED Series 2026</h3>
+              <p class="card-subtitle-ss-2">Full Array QLED Mini LED</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide-card-ss-2">
+          <div class="card-inner-ss-2">
+            <div class="card-media-ss-2">
+              <img class="card-img-ss-2" src="./vv5.webp" alt="Xiaomi x Leica" loading="lazy">
+            </div>
+            <div class="card-info-ss-2">
+              <h3 class="card-title-ss-2">Xiaomi x Leica</h3>
+              <p class="card-subtitle-ss-2">Strategic Partnership in Imagery Technology</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide-card-ss-2">
+          <div class="card-inner-ss-2">
+            <div class="card-media-ss-2">
+              <img class="card-img-ss-2" src="./vv6.webp" alt="Xiaomi India : 10 Years Of Tomorrow" loading="lazy">
+            </div>
+            <div class="card-info-ss-2">
+              <h3 class="card-title-ss-2">Xiaomi India : 10 Years Of Tomorrow</h3>
+              <p class="card-subtitle-ss-2">Decades of Innovation & Trust</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide-card-ss-2">
+          <div class="card-inner-ss-2">
+            <div class="card-media-ss-2">
+              <img class="card-img-ss-2" src="./vv7.webp" alt="Xiaomi HyperOS Smart Ecosystem" loading="lazy">
+            </div>
+            <div class="card-info-ss-2">
+              <h3 class="card-title-ss-2">Xiaomi HyperOS</h3>
+              <p class="card-subtitle-ss-2">Human x Car x Home Smart Ecosystem</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Dots Indicators -->
+    <div class="dots-pagination-ss-2" id="dotsContainer-ss-2"></div>
+
+  </section>
+<br><br>
+<!-- Support Section Start -->
+  <section class="support-section-ss-3">
+    <div class="support-container-ss-3">
+      <h2 class="support-title-ss-3">Xiaomi Support</h2>
+
+      <div class="support-grid-ss-3">
+        <!-- Card 1 -->
+        <a href="#" class="support-card-ss-3">
+          <div class="icon-wrapper-ss-3">
+            <i class="fa-solid fa-rotate-left"></i>
+          </div>
+          <h3 class="card-title-ss-3">Xiaomi Exchange</h3>
+          <p class="card-desc-ss-3">Save More & Go Green With Your Old Device</p>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="#" class="support-card-ss-3">
+          <div class="icon-wrapper-ss-3">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="card-title-ss-3">Mi Complete Protect...</h3>
+          <p class="card-desc-ss-3">Protect Your Device In Less Than ₹2/Day</p>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="#" class="support-card-ss-3">
+          <div class="icon-wrapper-ss-3">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 class="card-title-ss-3">Service Centers</h3>
+          <p class="card-desc-ss-3">Right Where You Need Us</p>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="#" class="support-card-ss-3">
+          <div class="icon-wrapper-ss-3">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3 class="card-title-ss-3">Chat Now</h3>
+          <p class="card-desc-ss-3">हिंदी / English</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Support Section End -->
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+  <footer class="footer-ss-4 bg-dark text-white pt-5 pb-3">
+    <div class="container-ss-4 container">
+      <div class="row-ss-4 row gy-4">
+        
+        <!-- Support Column -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2-ss-4 col-lg-2">
+          <h5 class="title-ss-4 text-white mb-3">Support</h5>
+          <ul class="list-unstyled-ss-4 text-muted small">
+            <li><a href="#" class="link-ss-4">Online Help</a></li>
+            <li><a href="#" class="link-ss-4">Customer Service</a></li>
+            <li><a href="#" class="link-ss-4">Shipping FAQ</a></li>
+            <li><a href="#" class="link-ss-4">Warranty</a></li>
+            <li><a href="#" class="link-ss-4">Xiaomi Exchange</a></li>
+            <li><a href="#" class="link-ss-4">User Guide</a></li>
+            <li><a href="#" class="link-ss-4">Laptop Drivers</a></li>
+            <li><a href="#" class="link-ss-4">Mi Screen Protect</a></li>
+            <li><a href="#" class="link-ss-4">Mi Extended Warranty</a></li>
+            <li><a href="#" class="link-ss-4">Mi Complete Protect</a></li>
+            <li><a href="#" class="link-ss-4">Certification</a></li>
+            <li><a href="#" class="link-ss-4">Service Centre</a></li>
+            <li><a href="#" class="link-ss-4">Xiaomi Easy Finance</a></li>
+            <li><a href="#" class="link-ss-4">Xiaomi Spotify India</a></li>
+          </ul>
+        </div>
+
+        <!-- Shop and Learn Column -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2-ss-4 col-lg-2">
+          <h5 class="title-ss-4 text-white mb-3">SHOP AND LEARN</h5>
+          <ul class="list-unstyled-ss-4 text-muted small">
+            <li><a href="#" class="link-ss-4">Xiaomi Phones</a></li>
+            <li><a href="#" class="link-ss-4">Redmi Phones</a></li>
+            <li><a href="#" class="link-ss-4">Tv's</a></li>
+            <li><a href="#" class="link-ss-4">Laptops and Tablets</a></li>
+            <li><a href="#" class="link-ss-4">Audio</a></li>
+            <li><a href="#" class="link-ss-4">Lifestyle</a></li>
+            <li><a href="#" class="link-ss-4">Smart Home</a></li>
+          </ul>
+        </div>
+
+        <!-- Retail Store Column -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2-ss-4 col-lg-2">
+          <h5 class="title-ss-4 text-white mb-3">RETAIL STORE</h5>
+          <ul class="list-unstyled-ss-4 text-muted small">
+            <li><a href="#" class="link-ss-4">Mi Home</a></li>
+            <li><a href="#" class="link-ss-4">Mi Authorized Store</a></li>
+            <li><a href="#" class="link-ss-4">Mi Store Franchise</a></li>
+          </ul>
+        </div>
+
+        <!-- About Us Column -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2-ss-4 col-lg-2">
+          <h5 class="title-ss-4 text-white mb-3">ABOUT US</h5>
+          <ul class="list-unstyled-ss-4 text-muted small">
+            <li><a href="#" class="link-ss-4">Xiaomi</a></li>
+            <li><a href="#" class="link-ss-4">Privacy Policy</a></li>
+            <li><a href="#" class="link-ss-4">User Agreement</a></li>
+            <li><a href="#" class="link-ss-4">Integrity & Compliance</a></li>
+            <li><a href="#" class="link-ss-4">CSR and Disclosures</a></li>
+            <li><a href="#" class="link-ss-4">E-Waste Management</a></li>
+            <li><a href="#" class="link-ss-4">In The Press</a></li>
+            <li><a href="#" class="link-ss-4">Trust Center</a></li>
+            <li><a href="#" class="link-ss-4">Culture</a></li>
+            <li><a href="#" class="link-ss-4">Smartphone Quality</a></li>
+            <li><a href="#" class="link-ss-4">TV Quality</a></li>
+            <li><a href="#" class="link-ss-4">Service Quality</a></li>
+            <li><a href="#" class="link-ss-4">Xiaomi HyperOS</a></li>
+            <li><a href="#" class="link-ss-4">Join Our Team</a></li>
+          </ul>
+        </div>
+
+        <!-- Social & App Download Column -->
+        <div class="col-12 col-md-8 col-lg-4-ss-4 col-lg-4">
+          <!-- Follow Mi -->
+          <div class="social-box-ss-4 mb-4">
+            <h5 class="title-ss-4 text-white mb-3">Follow Mi</h5>
+            <div class="d-flex gap-3">
+              <a href="https://www.facebook.com/XiaomiIndia/" class="social-icon-ss-4"><i class="bi bi-facebook"></i></a>
+              <a href="https://x.com/XiaomiIndia" class="social-icon-ss-4"><i class="bi bi-x"></i></a>
+              <a href="https://www.instagram.com/xiaomiindia/" class="social-icon-ss-4"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+
+
+         
+
+          <!-- Newsletter -->
+          <div class="newsletter-box-ss-4 mb-4">
+            <label class="form-label text-white mb-2 small">Let's stay in touch</label>
+            <div class="input-group-ss-4">
+              <input type="email" class="input-ss-4" placeholder="Enter email address">
+              <button class="btn-submit-ss-4" type="button"><i class="bi bi-chevron-right"></i></button>
+            </div>
+          </div>
+
+          <!-- QR Card -->
+          <div class="app-card-ss-4 p-3 mb-3">
+            <div class="d-flex align-items-center gap-3">
+              <img src="./qr image mi.webp">
+              <div>
+                <h6 class="mb-1 text-white fw-bold small">Get mi store app    </h6>
+                 <p>Scan for our up-to-date information for better shopping experience</p>
+           
+               
+              </div>
+            </div>
+
+
+
+
+
+
+
+          </div>
+
+          <!-- Play Store Button -->
+          <a href="#" class="playstore-btn-ss-4 w-100 d-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-google-play"></i>
+            <span class="small">Download on Google play</span>
+          </a>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary my-4">
+
+      <!-- Bottom Bar -->
+      <div class="bottom-bar-ss-4 d-flex flex-column flex-md-row justify-content-between align-items-center text-muted small">
+        <div class="copyright-ss-4 mb-2 mb-md-0">
+          Copyright © 2010 - 2026 Xiaomi. All Rights Reserved
+          <a href="#" class="ms-3 text-muted text-decoration-none">Sitemap</a>
+        </div>
+        <div class="location-ss-4">
+          India / English <i class="bi bi-globe ms-1"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+ 
+
+
+  <script>
+       
+       
+  
+    // Tab switching for Featured Products Section
+    function switchFeaturedTab(evt, tabId) {
+      const contents = document.querySelectorAll('.tab-content-ss1');
+      contents.forEach(content => content.classList.remove('active-ss1'));
+
+      const buttons = document.querySelectorAll('.tab-btn-ss1');
+      buttons.forEach(btn => btn.classList.remove('active-ss1'));
+
+      document.getElementById(tabId).classList.add('active-ss1');
+      evt.currentTarget.classList.add('active-ss1');
+    }
+
+    // Mega Menu side tabs switching
+    function switchMegaTab(evt, tabId) {
+      const parentWrapper = evt.currentTarget.closest('.uniqo1-mega-wrapper');
+      const tabs = parentWrapper.querySelectorAll('.uniqo1-side-tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      const contents = parentWrapper.querySelectorAll('.uniqo1-tab-content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      evt.currentTarget.classList.add('active');
+      parentWrapper.querySelector(`#${tabId}`).classList.add('active');
+    }
+
+    function openSearch() {
+      const searchPage = document.getElementById('searchPage');
+      searchPage.classList.add('active');
+      setTimeout(() => {
+        document.getElementById('searchInput').focus();
+      }, 100);
+    }
+
+    function closeSearch() {
+      const searchPage = document.getElementById('searchPage');
+      searchPage.classList.remove('active');
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+
+    // Header Dropdown Overlay Blur Functionality
+    const menuItemsWithDropdown = document.querySelectorAll('.uniqo1-menu-item');
+    const pageOverlay = document.getElementById('pageOverlay');
+
+    menuItemsWithDropdown.forEach(item => {
+      if (item.querySelector('.uniqo1-dropdown')) {
+        item.addEventListener('mouseenter', () => {
+          pageOverlay.classList.add('active');
+        });
+        item.addEventListener('mouseleave', () => {
+          pageOverlay.classList.remove('active');
+        });
+      }
+    });
+
+    // Sub-navbar Mobile Navigation Logic
+    const menuToggle = document.querySelector(".v2-0-menu-toggle");
+    const navigation = document.querySelector(".v2-0-navigation");
+    const menuLinks = document.querySelectorAll(".v2-0-menu-link");
+
+    function closeMobileMenu() {
+      if (navigation && menuToggle) {
+        navigation.classList.remove("v2-0-menu-open");
+        menuToggle.classList.remove("v2-0-toggle-active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+      }
+    }
+
+    if (menuToggle) {
+      menuToggle.addEventListener("click", function () {
+        const isOpen = navigation.classList.toggle("v2-0-menu-open");
+        menuToggle.classList.toggle("v2-0-toggle-active", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+      });
+    }
+
+    menuLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        menuLinks.forEach(item => item.classList.remove("v2-0-active"));
+        link.classList.add("v2-0-active");
+        closeMobileMenu();
+      });
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 850) {
+        closeMobileMenu();
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      const clickedInsideNavbar = event.target.closest(".v2-0-navbar");
+      if (!clickedInsideNavbar) {
+        closeMobileMenu();
+      }
+    });
+
+    // Hero Slider Functionality
+    document.addEventListener("DOMContentLoaded", () => {
+      const sliderWrapper = document.getElementById("v2_0-slider");
+      const slides = document.querySelectorAll(".v2_0-slide");
+      const bars = document.querySelectorAll(".v2_0-bar");
+      const prevBtn = document.getElementById("v2_0-prev");
+      const nextBtn = document.getElementById("v2_0-next");
+      const playPauseBtn = document.getElementById("v2_0-toggle-play");
+
+      let currentIndex = 0;
+      let isPlaying = true;
+      let autoSlideTimer;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("v2_0-active", i === index);
+        });
+
+        bars.forEach((bar, i) => {
+          bar.classList.remove("v2_0-active");
+          if (i === index) {
+            void bar.offsetWidth; // Reflow to restart CSS progress keyframe
+            bar.classList.add("v2_0-active");
+          }
+        });
+
+        currentIndex = index;
+      }
+
+      function nextSlide() {
+        let newIndex = (currentIndex + 1) % slides.length;
+        showSlide(newIndex);
+      }
+
+      function prevSlide() {
+        let newIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(newIndex);
+      }
+
+      function startAutoPlay() {
+        autoSlideTimer = setInterval(nextSlide, 4000);
+        sliderWrapper.classList.remove("v2_0-paused");
+      }
+
+      function stopAutoPlay() {
+        clearInterval(autoSlideTimer);
+        sliderWrapper.classList.add("v2_0-paused");
+      }
+
+      if (nextBtn && prevBtn) {
+        nextBtn.addEventListener("click", () => {
+          nextSlide();
+          if (isPlaying) { stopAutoPlay(); startAutoPlay(); }
+        });
+
+        prevBtn.addEventListener("click", () => {
+          prevSlide();
+          if (isPlaying) { stopAutoPlay(); startAutoPlay(); }
+        });
+      }
+
+      bars.forEach((bar, index) => {
+        bar.addEventListener("click", () => {
+          if (index < slides.length) {
+            showSlide(index);
+            if (isPlaying) { stopAutoPlay(); startAutoPlay(); }
+          }
+        });
+      });
+
+      if (playPauseBtn) {
+        playPauseBtn.addEventListener("click", () => {
+          const icon = playPauseBtn.querySelector("i");
+          if (isPlaying) {
+            stopAutoPlay();
+            isPlaying = false;
+            icon.className = "fa-solid fa-play";
+          } else {
+            startAutoPlay();
+            isPlaying = true;
+            icon.className = "fa-solid fa-pause";
+          }
+        });
+      }
+
+      startAutoPlay();
+    });
+
+
+
+
+
+//page Exclusive Offer  
+  const slider = document.getElementById('slider');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    // Scroll by width of one card + gap
+    nextBtn.addEventListener('click', () => {
+      const cardWidth = slider.querySelector('.offer-card').offsetWidth + 20;
+      slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      const cardWidth = slider.querySelector('.offer-card').offsetWidth + 20;
+      slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+
+    //page exploer xiomi 
+    (function () {
+      const track = document.getElementById('sliderTrack-ss-2');
+      const container = document.getElementById('sliderContainer-ss-2');
+      const prevBtn = document.getElementById('prevBtn-ss-2');
+      const nextBtn = document.getElementById('nextBtn-ss-2');
+      const dotsContainer = document.getElementById('dotsContainer-ss-2');
+      const slides = document.querySelectorAll('.slide-card-ss-2');
+
+      const totalSlides = slides.length;
+      let currentIndex = 0;
+      let startX = 0;
+      let isDragging = false;
+      let currentTranslate = 0;
+      let prevTranslate = 0;
+
+      function getVisibleCards() {
+        const width = window.innerWidth;
+        if (width <= 600) return 1;
+        if (width <= 992) return 2;
+        return 3;
+      }
+
+      function getMaxIndex() {
+        return Math.max(0, totalSlides - getVisibleCards());
+      }
+
+      function renderDots() {
+        dotsContainer.innerHTML = '';
+        const maxIndex = getMaxIndex();
+        for (let i = 0; i <= maxIndex; i++) {
+          const dot = document.createElement('button');
+          dot.classList.add('dot-ss-2');
+          if (i === currentIndex) dot.classList.add('active-ss-2');
+          dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+          dot.addEventListener('click', () => goToSlide(i));
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function updateSlider() {
+        const visibleCards = getVisibleCards();
+        const cardWidthPercentage = 100 / visibleCards;
+        currentTranslate = -currentIndex * cardWidthPercentage;
+        prevTranslate = currentTranslate;
+        track.style.transform = `translateX(${currentTranslate}%)`;
+
+        const maxIdx = getMaxIndex();
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= maxIdx;
+
+        const dots = dotsContainer.querySelectorAll('.dot-ss-2');
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active-ss-2', idx === currentIndex);
+        });
+      }
+
+      function goToSlide(index) {
+        const maxIdx = getMaxIndex();
+        currentIndex = Math.max(0, Math.min(index, maxIdx));
+        updateSlider();
+      }
+
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) goToSlide(currentIndex - 1);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        if (currentIndex < getMaxIndex()) goToSlide(currentIndex + 1);
+      });
+
+      function touchStart(event) {
+        isDragging = true;
+        startX = getPositionX(event);
+        track.style.transition = 'none';
+      }
+
+      function touchMove(event) {
+        if (!isDragging) return;
+        const currentX = getPositionX(event);
+        const diffX = currentX - startX;
+        const containerWidth = container.offsetWidth;
+        const movePercent = (diffX / containerWidth) * 100;
+        track.style.transform = `translateX(${prevTranslate + movePercent}%)`;
+      }
+
+      function touchEnd(event) {
+        if (!isDragging) return;
+        isDragging = false;
+        track.style.transition = 'transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)';
+        const endX = getPositionX(event);
+        const movedBy = endX - startX;
+
+        if (movedBy < -50 && currentIndex < getMaxIndex()) {
+          currentIndex += 1;
+        } else if (movedBy > 50 && currentIndex > 0) {
+          currentIndex -= 1;
+        }
+        updateSlider();
+      }
+
+      function getPositionX(event) {
+        return event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
+      }
+
+      container.addEventListener('touchstart', touchStart, { passive: true });
+      container.addEventListener('touchmove', touchMove, { passive: true });
+      container.addEventListener('touchend', touchEnd);
+
+      container.addEventListener('mousedown', touchStart);
+      container.addEventListener('mousemove', touchMove);
+      container.addEventListener('mouseup', touchEnd);
+      container.addEventListener('mouseleave', () => {
+        if (isDragging) touchEnd();
+      });
+
+      window.addEventListener('resize', () => {
+        renderDots();
+        if (currentIndex > getMaxIndex()) {
+          currentIndex = getMaxIndex();
+        }
+        updateSlider();
+      });
+
+      renderDots();
+      updateSlider();
+
+    })();
+
+
+
+   
+  </script>
+
+</body>
+</html>

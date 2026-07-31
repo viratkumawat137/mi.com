@@ -1,0 +1,22 @@
+{
+  "notes": [
+    {
+      "to": "Tove",
+      "from": "Jani",
+      "heading": true,
+      "body": "Don't forget me this weekend!"
+    },
+    {
+      "to": "Tom",
+      "from": "Jerry",
+      "heading": null,
+      "body": "Don't forget me this weekend!"
+    },
+    {
+      "to": "Tove",
+      "from": "Jani",
+      "heading": false,
+      "body": "Don't forget me this weekend!"
+    }
+  ]
+}
